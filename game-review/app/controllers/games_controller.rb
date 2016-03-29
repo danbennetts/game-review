@@ -9,12 +9,13 @@ class GamesController < ApplicationController
   end
 
   def new
-    @game = Game.new
+    @game = current_user.games.build
+    @genres = Genre.all.map{ |g| [g.name, g.id] }
   end
 
   def create
-    @game = Game.new(game_params)
-
+    @game = current_user.games.build(game_params)
+    @game.genre_id = params[:genre_id]
     if @game.save
       redirect_to root_path
     else
