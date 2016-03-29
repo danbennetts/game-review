@@ -1,0 +1,8 @@
+<%= simple_form_for @game do |f| %>
+  <%= f.input :title, label: "Game Title" %>
+  <%= f.input :description %>
+  <%= f.input :developer %>
+  <%= f.input :publisher %>
+  <%= f.input :rating %>
+  <%= f.button :submit %>
+<% end %>
