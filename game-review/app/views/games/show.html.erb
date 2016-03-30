@@ -1,14 +1,72 @@
-<h2><%= @game.title %></h2>
-<h3><%= @game.developer %></h3>
-<h3><%= @game.publisher %></h3>
-<h4>Genre: <%= @game.genre.name %></h4>
-<h4><%= @game.rating %></h4>
-<p><%= @game.description %></p>
+<div class="row">
 
-<%= link_to "Back", root_path %>
+  <div class="col-md-4">
+
+  <%= image_tag @game.game_img.url(:game_show), class: "game-show" %>
+
+  </div>
+
+  <div class="col-md-8">
+
+    <div class="game-info">
+
+      <h2 class="game-title"><%= @game.title %></h2>
+      <h3 class="game-developer">Developer: <%= @game.developer %></h3>
+      <h3 class="game-developer">Publisher: <%= @game.publisher %></h3>
+      <h4>Classification: <%= @game.rating %></h4>
+      <h3 class="avg-rating">Average Rating</h3>
+      <div class="average-review-rating" data-score="<%= @average_review %>"></div>
+      <span class="number-of-reviews">Based on <%= @game.reviews.count %> reviews</span>
+      <p class="game-desc"><%= @game.description %></p>
+
+    </div>
+  </div>
+
+</div>
+
+  <div class="row">
+    <div class="col-md-4">
+
+      <div class="reviews">
+
+      <h1>Reviews</h1>
+      <%= render @game.reviews %>
+
+      <div>
+        <%= link_to "Add Review", new_game_review_path(@game), class: "btn btn-custom"  %>
+      </div>
+    </div>
+
+    </div>
+  </div>
+
+<div class="links btn-grp">
+<%= link_to "Back", root_path, class: "btn btn-custom" %>
 <% if user_signed_in? %>
   <% if @game.user_id == current_user.id %>
-    <%= link_to "Edit", edit_game_path(@game) %>
-    <%= link_to "Delete", game_path(@game), method: :delete, data: { confirm: "Are you sure?"} %>
+    <%= link_to "Edit", edit_game_path(@game), class: "btn btn-custom" %>
+    <%= link_to "Delete", game_path(@game), method: :delete, data: { confirm: "Are you sure?"}, class: "btn btn-custom"  %>
   <% end %>
 <% end %>
+
+</div>
+
+<script>
+  $('.review-rating').raty({
+    readOnly: true,
+    score: function() {
+      return $(this).attr('data-score');
+    },
+    path: '/assets/'
+  });
+</script>
+
+<script>
+  $('.average-review-rating').raty({
+    readOnly: true,
+    path: '/assets/',
+    score: function() {
+      return $(this).attr('data-score')
+    }
+  });
+</script>

@@ -11,12 +11,13 @@
   <nav class="navbar navbar-default">
     <div class="container">
       <div class="navbar-header">
-        <%= link_to "Game Review", root_path, class: "navbar-brand" %>
+        <%= link_to "Dan's Game Shack", root_path, class: "navbar-brand" %>
       </div>
       <ul class="nav navbar-nav">
         <li><%= link_to "Register", new_user_registration_path %></li>
         <% if user_signed_in? %>
           <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
+          <li><%= link_to "Account Settings", edit_user_registration_path %></li>
           <% else %>
             <li><%= link_to "Login", new_user_session_path %></li>
         <% end %>
@@ -37,6 +38,8 @@
         </li>
 
 
+
+
         <% if user_signed_in? %>
           <li><%= link_to "Add Game", new_game_path %></li>
         <% end %>
@@ -44,10 +47,10 @@
     </div>
   </nav>
 
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
-
-<%= yield %>
+<div class="container">
+    <%= render 'layouts/messages' %>
+    <%= yield %>
+  </div>
 
 </body>
 </html>

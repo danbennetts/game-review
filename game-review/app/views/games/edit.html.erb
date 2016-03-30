@@ -1,11 +1,19 @@
-<h1>Edit Game</h1>
+<div class="col-md-6 col-md-offset-3">
 
-<%= simple_form_for @game, :html => { :multipart => true } do |f| %>
-  <%= f.select :genre_id, @genres %>
-  <%= f.input :title, label: "Game Title" %>
-  <%= f.input :description %>
-  <%= f.input :developer %>
-  <%= f.input :publisher %>
-  <%= f.input :rating %>
-  <%= f.button :submit %>
-<% end %>
+  <div class="edit-game-form">
+
+    <h1>Edit Game</h1>
+
+    <%= simple_form_for @game, :html => { :multipart => true } do |f| %>
+      <%= f.select :genre_id, @genres %>
+      <%= f.file_field :game_img %>
+      <%= f.input :title, label: "Game Title" %>
+      <%= f.input :description %>
+      <%= f.input :developer %>
+      <%= f.input :publisher %>
+      <%= f.input :rating %>
+      <%= f.button :submit %>
+    <% end %>
+
+  </div>
+</div>
