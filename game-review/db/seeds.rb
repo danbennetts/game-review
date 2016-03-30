@@ -1,3 +1,7 @@
+Game.destroy-all
+
+Genre.destroy_all
+
 Genre.create!([
   {name: "Action"},
   {name: "Action-Adventure"},
