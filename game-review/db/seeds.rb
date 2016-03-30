@@ -1,4 +1,4 @@
-Game.destroy-all
+Game.destroy_all
 
 Genre.destroy_all
 
