@@ -12,6 +12,7 @@ class GamesController < ApplicationController
   end
 
   def show
+    @review = Review.all
     if @game.reviews.blank?
       @average_review = 0
     else

@@ -31,7 +31,6 @@
 
       <h1>Reviews</h1>
       <%= render @game.reviews %>
-
       <div>
         <%= link_to "Add Review", new_game_review_path(@game), class: "btn btn-custom"  %>
       </div>
@@ -39,7 +38,6 @@
 
     </div>
   </div>
-
 <div class="links btn-grp">
 <%= link_to "Back", root_path, class: "btn btn-custom" %>
 <% if user_signed_in? %>
