@@ -1,28 +1,35 @@
-== README
+== WDI Project 1 - Game-Crunch
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Game-Crunch is a web app that allows users to add games to a library and provide reviews and other forms of information about each game. It is to provide people with advice on a particular game.
 
-Things you may want to cover:
+== Gems used in this application:
 
-* Ruby version
+* gem 'simple_form', '~> 3.2', '>= 3.2.1'
+* gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
 
-* System dependencies
+* gem 'annotate'
 
-* Configuration
+* gem 'devise', '~> 3.5', '>= 3.5.6'
 
-* Database creation
+* gem 'paperclip', '~> 4.3', '>= 4.3.6'
 
-* Database initialization
+* gem 'seed_dump'
+* gem 'aws-sdk', '< 2.0'
 
-* How to run the test suite
+# Models
 
-* Services (job queues, cache servers, search engines, etc.)
+* Users
+* Game
+* Genre
+* Review
 
-* Deployment instructions
+== Ruby Version
 
-* ...
+- Ruby 2.3.0
 
+== Plugins
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+- Raty
+- Sweetalert
+
+== Deployed using Hero*
