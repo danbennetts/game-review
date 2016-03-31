@@ -16,7 +16,7 @@ Game-Crunch is a web app that allows users to add games to a library and provide
 * gem 'seed_dump'
 * gem 'aws-sdk', '< 2.0'
 
-# Models
+== Models
 
 * Users
 * Game
@@ -32,4 +32,4 @@ Game-Crunch is a web app that allows users to add games to a library and provide
 - Raty
 - Sweetalert
 
-== Deployed using Hero*
+== Deployed using Heroku
