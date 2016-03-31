@@ -14,7 +14,7 @@
 /* General styles */
 
 body {
-	background-image: url("/assets/gaming-bg.jpg");
+	background-image: url("/assets/dpov2AL.png");
 	background-size: cover;
 	font-family: 'Lora', serif;
 }
@@ -26,6 +26,15 @@ h1, h2, h3, h4, h5, h6 {
 
 p.alert, p.notice {
 	margin: 0;
+}
+
+.footer {
+	text-align: center;
+	color: white;
+	position:absolute;
+	bottom:0;
+	width:100%;
+	height:100px;
 }
 
 
@@ -182,6 +191,7 @@ p.alert, p.notice {
 /* current-category styles */
 
 .current-genre {
+	color: white;
 	margin-bottom: 40px;
 }
 
