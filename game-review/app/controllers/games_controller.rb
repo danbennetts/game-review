@@ -50,7 +50,11 @@ class GamesController < ApplicationController
 
   def destroy
     @game.destroy
-    redirect_to root_path
+    respond_to do |format|
+      format.html { redirect_to root_path }
+      format.json { render :json => { :status => "DELETED" } }
+    end
+    # redirect_to root_path
   end
 
   private

@@ -10,7 +10,6 @@ class ReviewsController < ApplicationController
   def create
     @review = Review.new(review_params)
     @review.game_id = @game.id
-    @review.user = current_user
     @review.user_id = current_user.id
 
     if @review.save

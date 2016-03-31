@@ -20,7 +20,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-	font-family: 'Permanent Marker', sans-serif;
+	font-family: 'Fugaz One', sans-serif;
 	font-weight: 300;
 }
 
@@ -32,7 +32,7 @@ p.alert, p.notice {
 /* Navbar/navigation styles */
 
 .navbar {
-	font-family: 'Permanent Marker', sans-serif;
+	font-family: 'Fugaz One', sans-serif;
 	text-transform: uppercase;
 }
 .navbar-default {
@@ -83,7 +83,7 @@ p.alert, p.notice {
 	border: 1px solid darken(#f1c40f, 5%);
 	padding: 8px 20px;
 	border-radius: 5px;
-	font-family: 'Permanent Marker', sans-serif;
+	font-family: 'Fugaz One', sans-serif;
 	&:hover {
 		text-decoration: none;
 		background-color: darken(#f1c40f, 5%);
@@ -98,7 +98,7 @@ p.alert, p.notice {
 	border: 1px solid #222;
 	padding: 8px 20px;
 	border-radius: 5px;
-	font-family: 'Permanent Marker', sans-serif;
+	font-family: 'Fugaz One', sans-serif;
 	&:hover {
 		text-decoration: none;
 		background-color: #333;
@@ -325,4 +325,8 @@ p.alert, p.notice {
     border-color: #d6e9c6;
     color: #468847;
     text-align: left;
+ }
+
+ .navbar-inverse .navbar-nav > li > a {
+	 color: white;
  }

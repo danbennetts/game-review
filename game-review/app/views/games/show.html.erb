@@ -28,9 +28,14 @@
     <div class="col-md-4">
 
       <div class="reviews">
-
       <h1>Reviews</h1>
+
+
+
+
       <%= render @game.reviews %>
+      <p>Review by
+      </p>
       <div>
         <%= link_to "Add Review", new_game_review_path(@game), class: "btn btn-custom"  %>
       </div>
@@ -43,7 +48,7 @@
 <% if user_signed_in? %>
   <% if @game.user_id == current_user.id %>
     <%= link_to "Edit", edit_game_path(@game), class: "btn btn-custom" %>
-    <%= link_to "Delete", game_path(@game), method: :delete, data: { confirm: "Are you sure?"}, class: "btn btn-custom"  %>
+    <%= link_to "Delete", game_path(@game), data: { behaviour: "delete"}, class: "btn btn-custom"  %>
   <% end %>
 <% end %>
 
