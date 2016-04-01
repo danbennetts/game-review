@@ -8,6 +8,19 @@
       <%= f.error_notification %>
 
       <div class="form-inputs">
+        <p><%= f.label :avatar, class: 'col-sm-2 control-label'  %></p>
+        <p><%= f.file_field :avatar %></p>
+
+       <p><%= f.label :username %></p>
+       <p><%= f.text_field :name, autofocus: true %></p>
+
+       <p><%= f.check_box :is_female, {}, true %> <%= f.label :is_female, "Female" %></p>
+       <p><%= f.check_box :is_female, {}, false %> <%= f.label :is_female, "Male" %></p>
+
+       <p><%= f.label :date_of_birth %>
+       <%= f.date_select :date_of_birth, :start_year=>1900 %>
+       <%= f.input :email, required: true, autofocus: true %></p>
+
         <%= f.input :email, required: true, autofocus: true %>
         <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
         <%= f.input :password_confirmation, required: true %>
