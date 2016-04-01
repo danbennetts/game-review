@@ -16,8 +16,7 @@
       <ul class="nav navbar-nav">
         <li><%= link_to "Register", new_user_registration_path %></li>
         <% if user_signed_in? %>
-          <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
-          <li><%= link_to "Account Settings", edit_user_registration_path %></li>
+          <li><%= link_to "Add Game", new_game_path %></li>
           <% else %>
             <li><%= link_to "Login", new_user_session_path %></li>
         <% end %>
@@ -33,7 +32,6 @@
                   <%= link_to genre.name, games_path(genre: genre.name), class: "link" %>
                 </li>
               <% end %>
-
             </ul>
         </li>
 
@@ -41,7 +39,8 @@
 
 
         <% if user_signed_in? %>
-          <li><%= link_to "Add Game", new_game_path %></li>
+          <li><%= link_to "Edit Profile", edit_user_registration_path %></li>
+          <li><%= link_to "Log Out #{current_user.email}", destroy_user_session_path, method: :delete %></li>
         <% end %>
       </ul>
     </div>
