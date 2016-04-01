@@ -1,6 +1,6 @@
 <%= simple_form_for @game do |f| %>
   <%= select_tag(:genre_id, options_for_select(@genres), :prompt => "Select a Genre") %>
-  <%= f.file_field :game_img %>
+  <%= f.file_field :game_img, label: "Upload a game cover" %>
   <%= f.input :title, label: "Game Title" %>
   <%= f.input :description %>
   <%= f.input :developer %>

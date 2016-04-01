@@ -7,7 +7,7 @@ $(window).load(function(){
 $(document).ready(function () {
    $(document).on("click", "[data-behaviour='game-delete']", function (event) {
       event.preventDefault();
-
+      var href = $(this).attr("href");
       swal({
          title: 'Are you sure?',
          text: 'Once you delete this game there is no going back.',
@@ -21,7 +21,7 @@ $(document).ready(function () {
       }, function (confirmed) {
          if (confirmed) {
             $.ajax({
-               url: $(this).attr("href"),
+               url: href,
                dataType: "JSON",
                method: "DELETE",
                success: function () {
@@ -41,7 +41,7 @@ $(document).ready(function () {
 $(document).ready(function () {
    $(document).on("click", "[data-behaviour='review-delete']", function (event) {
       event.preventDefault();
-
+      var href = $(this).attr("href");
       swal({
          title: 'Are you sure?',
          text: 'Once you delete this review there is no going back.',
@@ -55,7 +55,7 @@ $(document).ready(function () {
       }, function (confirmed) {
          if (confirmed) {
             $.ajax({
-               url: $(this).attr("href"),
+               url: href,
                dataType: "JSON",
                method: "DELETE",
                success: function () {

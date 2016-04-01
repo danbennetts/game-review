@@ -49,7 +49,11 @@ class GamesController < ApplicationController
   end
 
   def destroy
+    # binding.pry
     @game.destroy
+
+    # puts "HELELEOEANLFKNALKFNASLKN"
+
     respond_to do |format|
       format.html { redirect_to root_path }
       format.json { render :json => { :status => "DELETED" } }

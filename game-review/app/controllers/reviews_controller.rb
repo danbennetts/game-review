@@ -32,7 +32,10 @@ class ReviewsController < ApplicationController
 
   def destroy
     @review.destroy
-    redirect_to game_path(@game)
+    respond_to do |format|
+      format.html { redirect_to game_path(@game) }
+      format.json { render :json => { :status => "DELETED" } }
+    end
   end
 
   private
