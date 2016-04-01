@@ -212,6 +212,7 @@ Devise.setup do |config|
   # "users/sessions/new". It's turned off by default because it's slower if you
   # are using only default views.
   config.scoped_views = true
+  config.secret_key = 'b208085f18285519eecc785bf7f3ea96a0f724eb2cf81ca8682d2d5704f31bb7d74816b02aad7fc8634d34606aa432a417a5dff39d0a93bad7f47854ae7fa300'
 
   # Configure the default scope given to Warden. By default it's the first
   # devise role declared in your routes (usually :user).
